@@ -1,0 +1,152 @@
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.frase{
+    flex-direction: column;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones a{
+    
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(37, 37, 37);
+}
+
+h1, h2{
+    align-items: center;
+    display: flex;
+    align-content: center;
+}
+.orden {
+    display: flex;
+    justify-content: center;
+}
+.orden div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    align-content: center;
+}
+.orden form {                     
+    width: 450px;             
+    background-color: #f9f9f9;     
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgb(112, 112, 220);
+    
+}
+
+.error {
+    color: red;
+
+}
+.imagen{
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+}
+#contenedor-series{
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 600px;
+    justify-content: center;
+    align-content: center;
+    
+}
+.gris{
+    background-color: rgb(231, 218, 218);
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+.contenedor-imagen{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.contenido-tarjeta{
+    flex: 2;
+    justify-content: space-between;
+    position: relative;
+}
+.contenido-tarjeta a{
+    position: relative; left: 350px;
+    position: relative; bottom: 10px;
+    
+}
+.btn{
+    background-color: rgb(104, 104, 241);
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid rgb(87, 87, 176);
+}
+.caja-btn{
+    align-items: center;
+}
+
+.btn-1{
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid rgb(198, 28, 28);
+}
+.botones-editar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.botones-editar form{
+    border: none;
+    
+    width: 100px;
+}
+.nav-1{
+    display: flex;
+    justify-content: space-around;
+}
+.detalle{
+    display: flex;
+    flex: 2;
+    border: 1px solid rgb(112, 112, 220);
+    background-color: #f9f9f9;  
+    padding: 20px;
+}
+.imagen-1{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+.contenedor-detalle{
+    display: flex;
+    flex:2;
+    flex-direction: column;
+    gap:5px;
+    justify-content: center;
+    align-content: center;
+    margin-left: 15px;
+
+}

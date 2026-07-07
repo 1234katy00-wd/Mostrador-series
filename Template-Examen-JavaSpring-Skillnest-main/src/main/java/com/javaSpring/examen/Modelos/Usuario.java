@@ -1,0 +1,116 @@
+package com.javaSpring.examen.Modelos;
+
+import java.util.List;
+
+import org.eclipse.tags.shaded.org.apache.xalan.xsltc.compiler.sym;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+@Entity
+@Table (name = "usuarios")
+public class Usuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @NotBlank(message = "Por favor proporciona tu nombre.")
+    @Size(min = 3, message ="El nombre debe tener al menor 3 caracteres.")
+    private String nombre;
+
+    @NotBlank(message = "Por favor proporciona tu apellido.")
+    @Size(min = 3, message ="El apellido debe tener al menor 3 caracteres.")
+    private String apellido;
+
+    @Email(message = "Proporciona un correo válido.")
+    @NotBlank(message = "Por favor ingresar un correo válido.")
+    private String correo;
+
+    @NotBlank(message = "Por favor proporciona tu contraseña.")
+    @Size(min = 8, message ="La contraseña debe tener al menor 8 caracteres.")
+    private String password;
+
+    @Transient
+    private String confirmarPassword;
+
+    //Relacion
+    @OneToMany(mappedBy = "comprador")
+    private List<Serie>series;
+
+
+    public Usuario() {
+    }
+
+    public Usuario(Long id, String nombre, String apellido, String correo, String password, String confirmarPassword) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.password = password;
+        this.confirmarPassword = confirmarPassword;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getConfirmarPassword() {
+        return confirmarPassword;
+    }
+
+    public void setConfirmarPassword(String confirmarPassword) {
+        this.confirmarPassword = confirmarPassword;
+    }
+    public void setSeries(List<Serie> series) {
+        this.series = series;
+    }
+    public List<Serie> getSeries() {
+        return series;
+    }
+    
+}
