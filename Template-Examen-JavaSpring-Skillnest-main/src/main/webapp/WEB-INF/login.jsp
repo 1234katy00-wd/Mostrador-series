@@ -33,7 +33,7 @@
 
 			<div>
 				<form:label path="password">Contraseña:</form:label>
-				<form:input type="text" path="password" />
+				<form:input type="password" path="password" />
 				<form:errors class="error" path="password" />
 			</div>
 

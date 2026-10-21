@@ -15,7 +15,7 @@
     <div class="nav-1">
         <div class="frase">
             <h1>TV Serie</h1>
-            <h2>Bienvenido de vuelta : <b>${usuarioEnSesion}</b></h2>
+            <h2>Bienvenido de vuelta : <b>"${usuarioEnSesion}"</b></h2>
         </div>
         <div class="botones">
             <a href="/inicio/series">Serie</a>
@@ -35,7 +35,7 @@
                 <div>
                     <h3>${serie.titulo}</h3>
                     <p>Año: <b>${serie.year}</b></p>
-                    <p>Precio: <b>${serie.precio}</b></p>
+                    <p>Precio: <b>${serie.precioFormateado}</b></p>
                 </div>
                 <a href="/editar/serie/${serie.id}"><img src="/img/lapiz.png" alt="editar"/></a>
             </div>

@@ -30,7 +30,7 @@
             <div class="contenedor-detalle">
                 <p>Usuario que publicó esta serie: <b>${serie.comprador.nombre}</b></p>
                 <p>Descripción: <b>${serie.descripcion}</b></p>
-                <p>Precio: <b>${serie.precio}</b></p>
+                <p>Precio: <b>${serie.precioFormateado}</b></p>
                 <p>Cantidad: <b>${serie.cantidad}</b></p>
             </div>   
     </div>

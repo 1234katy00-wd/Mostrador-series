@@ -128,6 +128,18 @@ public class Serie {
         return comprador;
     }
     
+    public String getPrecioFormateado(){
+        if(this.precio == null){
+            return "0";
+        }
+        java.text.DecimalFormat pf = new java.text.DecimalFormat("#,###");
+        java.text.DecimalFormatSymbols symbols = new java.text.DecimalFormatSymbols();
+    
+        symbols.setGroupingSeparator('.');
+        pf.setDecimalFormatSymbols(symbols);
+
+        return pf.format(this.precio);
+    }
 
     
     

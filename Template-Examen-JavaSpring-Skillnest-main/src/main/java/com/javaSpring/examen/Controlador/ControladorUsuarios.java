@@ -33,7 +33,7 @@ public class ControladorUsuarios {
             return"registro.jsp";
         }
         Usuario usuarioCreado = this.servicioUsuario.crearUsuario(usuario);
-        sesion.setAttribute("usuario", usuarioCreado.getNombre() + "" + usuarioCreado.getApellido());
+        sesion.setAttribute("usuarioEnSesion", usuarioCreado.getNombre() + " " + usuarioCreado.getApellido());
         sesion.setAttribute("idUsuario", usuarioCreado.getId());
 
         return"redirect:/inicio/series";

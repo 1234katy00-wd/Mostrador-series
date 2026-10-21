@@ -46,13 +46,13 @@
 
 			<div>
 				<form:label path="password">Contraseña:</form:label>
-				<form:input type="text" path="password" />
+				<form:input type="password" path="password" />
 				<form:errors class="error" path="password" />
 			</div>
 
 			<div>
 				<form:label path="confirmarPassword">Confirmar Contraseña:</form:label>
-				<form:input type="text" path="confirmarPassword" />
+				<form:input type="password" path="confirmarPassword" />
 				<form:errors class="error" path="confirmarPassword" />
 			</div>
 

@@ -2,7 +2,6 @@ package com.javaSpring.examen.Modelos;
 
 import java.util.List;
 
-import org.eclipse.tags.shaded.org.apache.xalan.xsltc.compiler.sym;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
