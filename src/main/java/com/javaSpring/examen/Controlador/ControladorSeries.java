@@ -79,9 +79,18 @@ public class ControladorSeries {
     }
 
     @DeleteMapping("/eliminar/serie/{id}")
-    public String eliminarSerie(@PathVariable("id")Long id){
+    public String eliminarSerie(@PathVariable("id")Long id, HttpSession sesion){
+        Long idUsuario = (Long) sesion.getAttribute("idUsuario");
+        if(idUsuario == null){
+            return"redirect:/login";
+        }
+        Serie.obtenerSeriePorId = this.servicioSeries.obtenerSeriePorId(id);
+
+        if (serie == null || !idUsuario.equals(serie.getUsuarioLogin().getId())) {
+        return "Acceso no válido."; 
+        }
         this.servicioSeries.eliminarSerie(id);
-        return"redirect:/inicio/series";
+        return "redirect:/inicio/series";
     }
 
     @GetMapping("/detalle/serie/{id}")

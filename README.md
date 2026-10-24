@@ -2,7 +2,7 @@
 
 Aplicación web para administrar un catálogo de series. Permite crear una cuenta e iniciar sesión, consultar series y agregar, editar, ver el detalle o eliminar registros.
 
-Este proyecto fue desarrollado como parte de un bootcamp de Skillnest.
+Este proyecto fue desarrollado como parte de un bootcamp full stack java de Skillnest.
 
 ## Tecnologías
 
